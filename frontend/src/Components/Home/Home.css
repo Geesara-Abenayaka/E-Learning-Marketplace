@@ -1,0 +1,245 @@
+.ai-era {
+
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+
+}
+
+.ai-era-div {
+    padding-left: 50px;
+    padding-bottom: 60px;
+    margin-top: 50px;
+    margin-left: 115px;
+    margin-right: 115px;
+    padding-top: 100px;
+    font-family: "Roboto";
+    display: flex;
+    background-color: #202230;
+    color: white;
+    border-radius: 30px;
+    border: none;
+}
+
+.ai-era-desc {
+    font-size: 15.5px;
+
+    padding-top: 5px;
+    color: #d0d3ec;
+    font-weight: 300;
+    line-height: 1.5;
+    display: flex;
+}
+
+.ai-icon {
+    padding-top: 25px;
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+    color: #d6c0f4;
+
+}
+
+.avd {
+    display: flex;
+}
+
+.abd {
+    padding-top: 29px;
+    letter-spacing: -0.5px;
+}
+
+.certi-icon {
+    padding-left: 85px;
+    padding-top: 25px;
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+    color: #b2fed7;
+}
+
+.adv-icon {
+    padding-left: 38px;
+    padding-top: 25px;
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+    color: #b2fed7;
+}
+
+.p1img {
+    height: 470px;
+    margin-left: 85px;
+    margin-top: -50px;
+
+}
+
+.lrn-btn {
+    margin-top: 30px;
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    font-weight: 600;
+}
+
+.prc {
+    margin-top: 10px;
+    font-size: 14px;
+    letter-spacing: -0.5px;
+    color: #d0d3ec;
+}
+
+.skill-topic {
+    margin-top: 80px;
+    font-size: 30px;
+    font-weight: 500;
+    font-family: 'Roboto';
+    color: rgb(39, 39, 39);
+    padding-left: 112px;
+    letter-spacing: 1px;
+    line-height: 50px;
+}
+
+.skill-topic-desc {
+    padding-left: 112px;
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.tabs {
+    margin-left: 112px;
+    font-family: 'Roboto';
+    display: flex;
+    font-weight: 700;
+    color: #5d5d5d;
+    gap: 25px;
+}
+
+
+.tabs:hover {
+    cursor: pointer;
+
+}
+
+
+
+
+
+.btn-itm {
+    transition: color 0.3s, border-bottom 0.3s;
+    padding-bottom: 12px;
+}
+
+.btn-itm:hover {
+    color: black;
+}
+
+.btn-itm.active {
+    color: black;
+    border-bottom: 2px solid black;
+}
+
+hr {
+    margin-top: -1px;
+    color: #d3d3d3;
+    margin-left: 112px;
+    margin-right: 112px;
+}
+
+.card-div {
+    border: 1.5px solid rgb(229, 228, 228);
+    border-top: none;
+    border-radius: 20px;
+    position: relative;
+
+
+
+}
+
+.card-div:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+
+}
+
+.cards-container {
+    display: flex;
+    gap: 18px;
+    margin-left: 112px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    
+
+}
+
+/* .model {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    border: 1px solid rgb(222, 222, 222);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    opacity: 0;
+    animation: fadeIn 0.3s forwards;
+} */
+
+.loweena .model-container {
+    left: -360px;
+}
+
+.loweena .model-container::after {
+  content: "";
+  position: absolute;
+  right: -10px; 
+  top: 80px; 
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;   /* top slant */
+  border-bottom: 10px solid transparent; /* bottom slant */
+  border-left: 10px solid white;         /* <-- visible side (arrow color) */
+  filter: drop-shadow(1px 0px 1px rgba(0, 0, 0, 0.1)); /* subtle shadow */
+}
+
+.loweena .model-container::before {
+  content: none !important;
+}
+
+.next-btn{
+    z-index:2000;
+    margin-top: -250px;
+    margin-left: 1385px;
+         z-index: 10000;
+}
+.next-button:hover { 
+    background-color: #e9eaec;
+}
+.next-button:hover .aaa{ 
+    background-color:  #e9eaec;
+    cursor: pointer;
+}
+.next-button{
+    position: relative;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    border: 1px solid rgb(200, 200, 200);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 8px #00000026;
+    z-index: 500;
+    border:none;
+}
+.aaa{
+    padding-top: 5px;
+    width:30px;
+    height:30px;
+    color: #5d5d5d;
+    background-color: white;
+    z-index: 1000;
+   
+}

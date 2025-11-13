@@ -1,0 +1,233 @@
+.login-image {
+    width: 640px;
+    height: 720px;
+    margin-top: 60px;
+    margin-left: 110px;
+}
+
+.login-container {
+    display: flex;
+}
+
+.login-heading {
+    font-family: "Roboto", sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: #2a2b3f;
+    margin-left: 200px;
+    margin-top: 110px;
+}
+
+.email-input {
+    height: 60px;
+    width: 405px;
+    border-radius: 5px;
+    margin-left: 115px;
+    border: 1px solid #858585;
+    padding-left: 15px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.email-input::placeholder {
+    color: black;
+    font-size: 15px;
+    font-weight: 540;
+    transition: transform 0.25s ease, font-size 0.25s ease, opacity 0.25s ease;
+    
+}
+.email-input:focus {
+    outline: none;
+    border: 1px solid #794ef0;
+}
+.email-input:hover:not(:focus) {
+    background-color: #f4f1f1;
+}
+
+.email-input:focus::placeholder {
+    font-size: 12px;
+    transform: translateY(-16px);
+    opacity: 0.7;
+}
+
+.password-input {
+    height: 60px;
+    width: 405px;
+    border-radius: 5px;
+    margin-left: 115px;
+    border: 1px solid #858585;
+    padding-left: 15px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.password-input:focus {
+    outline: none;
+    border: 1px solid #794ef0;
+}
+.password-input:hover:not(:focus) {
+    background-color: #f4f1f1;
+}
+.password-input::placeholder {
+    color: black;
+    font-size: 15px;
+    font-weight: 540;
+    transition: transform 0.25s ease, font-size 0.25s ease, opacity 0.25s ease;
+}
+.password-input:focus::placeholder {
+    font-size: 12px;
+    transform: translateY(-16px);
+    opacity: 0.7;
+}
+
+.checkbox-input {
+    margin-left: 115px;
+    width:15px;
+    height:15px;
+    accent-color: rgb(145, 36, 223);
+    margin-right: 7px;
+}
+.checkbox-label{
+    display: flex;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+.bottom-topic{
+    margin-top: 6px;
+    /* margin-left: 140px; */
+
+}
+.checkbox-text{
+    margin-top: 2px;
+}
+.continue-button {
+    height: 50px;
+    width: 425px;
+    border-radius: 5px;
+    margin-left: 115px;
+    border: none;
+    background-color: #6d28d2;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.continue-button:hover {
+    background-color: #8115d9;
+}
+.hr-text{
+    /* margin-left: 115px; */
+    
+    display: flex;
+    align-items:center;
+    text-align: center;
+    color: gray ;
+    margin-left: 105px;
+    margin-right: 225px;
+    margin-top: 10px;
+
+}
+.hr-text hr{
+    flex:1;
+    border:none;
+    border-top:1px solid #8e8e8e;
+    margin: 0 10px;
+    
+}
+.or-text {
+  white-space: nowrap;
+  font-weight: 300;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+}
+.google-img{
+    height:24px;
+    width:26px;
+    padding-top: 5px;
+}
+.google-button{
+    height:50px;
+    width:50px;
+    border-radius:5px;
+    border:1px solid #858585;
+    background-color: white;
+    cursor: pointer;
+}
+.google-button:hover {
+    background-color: #efe7fb;
+}
+
+.facebook-img{
+    height:24px;
+    width:26px;
+    padding-top: 5px;
+}
+.facebook-button{
+    height:50px;
+    width:50px;
+    border-radius:5px;
+    border:1px solid #858585;
+    background-color: white;
+    cursor: pointer;
+}
+.facebook-button:hover {
+    background-color: #efe7fb;
+}
+
+
+
+.apple-img{
+    height:24px;
+    width:26px;
+    padding-top: 5px;
+}
+.apple-button{
+    height:50px;
+    width:50px;
+    border-radius:5px;
+    border:1px solid #858585;
+    background-color: white;
+    cursor: pointer;
+}
+.apple-button:hover {
+    background-color: #efe7fb;
+}
+.other-signup-options{
+    display: flex;
+    gap:25px;
+    margin-left: 220px;
+    margin-top: 35px;
+}
+.login-bottom-text{
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+   
+    color: #4a4a4a;
+   
+    
+    margin-left: 155px;
+    margin-top: 35px;
+}
+.signup-text{
+    display: flex;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    color: #4a4a4a;
+    margin-left: 115px;
+    height:60px;
+    width:425px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 25px;
+    background-color: rgb(243, 243, 243);
+}
+.signup{
+    color: #6d28d2;
+    font-weight: 600;
+    margin-left: 5px;
+    cursor: pointer;
+}

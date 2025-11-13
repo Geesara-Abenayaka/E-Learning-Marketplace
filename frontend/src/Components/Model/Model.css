@@ -1,0 +1,101 @@
+.model-container {
+    position: absolute;
+    top: -50px;
+    left: 330px;
+    z-index: 1000;
+    width:322px;
+    background-color: white;
+
+    padding-left: 20px;
+    padding-top: 30px;
+    padding-bottom: 25px;
+    border:2px solid rgb(221, 221, 221);
+    border-radius: 10px;
+     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.model-container::before {
+    content: "";
+    position: absolute;
+    left: -10px;          
+    top: 120px;            
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid white;   
+    color: white;
+    filter: drop-shadow(-1px 0px 1px rgba(0, 0, 0, 0.1)); 
+}
+.model-title{
+    font-size:20px;
+    font-family: 'Roboto';
+    font-weight: 450;
+    margin-bottom: 10px;
+}
+.bestseller-badge{
+    font-family: 'Roboto';
+    background-color: #c2e9eb;  
+    color: #276874;
+    font-weight: 500;
+    padding: 3px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    padding-bottom:4px;
+}
+.model-subtext{
+    font-family:"Roboto";
+    font-size: 12px;
+    color:#505050;
+    margin-top:5px;
+    margin-left: 5px;
+}
+.date{
+    color: rgb(2, 101, 2);
+}
+.model-subheader{
+    display: flex;
+}
+.model-info{
+    margin-top: 10px;
+    font-size: 12px;
+    font-family: 'Roboto';
+    margin-bottom:10px;
+    color:#808080;
+}
+.model-desc{
+    font-family: 'Roboto';
+    font-size: 14px;
+    margin-bottom: 15px;
+    color:#808080;
+    font-weight: 350;
+}
+.list-desc{
+    margin-bottom: 10px;
+    font-family: 'Arial';
+    padding-left: 30px;
+    margin-top: -18px;
+     color:#838383;
+     font-size: 14px;
+     font-weight:-500;
+
+}
+.list-heading{
+    font-family: 'Arial';
+    font-size: 14px;
+    color:#1a1a1a;
+
+    font-size:14px;
+}
+.add-to-cart{
+    height:45px;
+    width: 300px;
+    border:none;
+    background-color: #6d28d2;
+    color: white;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 5px;
+   
+}
+.addtocart{
+     font-weight: 600;
+    
+}
