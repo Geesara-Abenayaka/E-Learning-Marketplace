@@ -1,0 +1,50 @@
+.my-cart{
+    font-family: 'Roboto';
+    text-align: center;
+    margin-top: 20px;
+    font-size: 23px;
+}
+.buy-now{
+    height:40px;
+    width:100px;
+    background-color: #794ef0;
+    color: white;
+    border-radius: 10px;
+    border:none;
+    margin-left: 700px;
+    margin-top: 50px;
+}
+.uio{
+    margin-top: 10px;
+}
+.jkl {
+    margin-top: 10px;
+  margin-left: 110px;
+  border: 1px solid #7b7b7b; /* black border, 2px thick */
+  border-radius: 8px;     /* optional: rounded corners */
+  
+}
+.tyh{
+    display: flex;
+}
+.cancel-btn{
+    margin-left: 50px;
+    height:30px;
+    margin-top: -20px;
+    margin-bottom: 10px;
+    background-color: #794ef0;
+    width:200px;
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    border: none;
+    border-radius: 10px;
+}
+.cancel-btn:hover{
+    background-color: blueviolet;
+    transition: 0.3s ease-in-out;
+}
+.buy-now:hover{
+    background-color: blueviolet;
+    transition: 0.3s ease-in-out;
+}

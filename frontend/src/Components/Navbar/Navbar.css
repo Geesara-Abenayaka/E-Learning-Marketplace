@@ -16,7 +16,7 @@
 .search-wrapper {
     position: relative;
     display: inline-block;
-    margin-left: 20px;
+    margin-left: 10px;
     margin-top: 13px;
 }
 
@@ -54,11 +54,84 @@
     color: rgb(92, 92, 92);
     font-size: 14px;
     font-weight: 350;
-    padding-top: 13px;
-    margin-left: 20px;
+
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 12px;
+    border-radius: 15px;
+    border: none;
+    background-color: white;
+    padding: 5px;
 
 }
 
+.explore-text:hover,
+.explore-text1:hover,
+.explore-text2:hover,
+.explore-text3:hover,
+.explore-text4:hover {
+    background-color: rgb(246, 246, 246);
+    color: #6d28d2;
+}
+.explore-text1{
+   font-family: "Roboto", sans-serif;
+    color: rgb(92, 92, 92);
+    font-size: 14px;
+    font-weight: 350;
+
+    margin-left: 5px;
+    margin-top: 20px;
+    margin-bottom: 12px;
+    border-radius: 15px;
+    border: none;
+    background-color: white;
+    padding: 5px;
+    
+}
+.explore-text2{
+    font-family: "Roboto", sans-serif;
+    color: rgb(92, 92, 92);
+    font-size: 14px;
+    font-weight: 350;
+
+    margin-left: 5px;
+    margin-top: 20px;
+    margin-bottom: 12px;
+    border-radius: 15px;
+    border: none;
+    background-color: white;
+    padding: 5px;
+}
+.explore-text3{
+    font-family: "Roboto", sans-serif;
+    color: rgb(92, 92, 92);
+    font-size: 14px;
+    font-weight: 350;
+
+    margin-left: 5px;
+   margin-top: 20px;
+    margin-bottom: 12px;
+    border-radius: 15px;
+    border: none;
+    background-color: white;
+    padding: 5px;
+
+}
+.explore-text4{
+    font-family: "Roboto", sans-serif;
+    color: rgb(92, 92, 92);
+    font-size: 14px;
+    font-weight: 350;
+    width:50px;
+    margin-left: 8px;
+   margin-top: 20px;
+    margin-bottom: 12px;
+    border-radius: 15px;
+    border: none;
+    background-color: white;
+    padding: 5px;
+
+}
 .cart-icon {
     height: 18px;
     width: 18px;
@@ -70,7 +143,7 @@
     width: 80px;
     height: 40px;
     margin-top: 15px;
-    margin-left: 35px;
+    margin-left: 12px;
     background-color: white;
     font-weight: bold;
     border-radius: 5px;

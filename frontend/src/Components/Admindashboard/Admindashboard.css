@@ -1,0 +1,114 @@
+.email-input1 {
+    margin-top: 20px;
+    height: 50px;
+    width: 405px;
+    border-radius: 5px;
+    margin-left: 115px;
+    border: 1px solid #858585;
+    padding-left: 15px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.email-input1::placeholder {
+    color: black;
+    font-size: 15px;
+    font-weight: 540;
+    transition: transform 0.25s ease, font-size 0.25s ease, opacity 0.25s ease;
+    
+}
+.email-input1:focus {
+    outline: none;
+    border: 1px solid #794ef0;
+}
+.email-input1:hover:not(:focus) {
+    background-color: #f4f1f1;
+}
+
+.email-input1:focus::placeholder {
+    font-size: 12px;
+    transform: translateY(-16px);
+    opacity: 0.7;
+}
+
+
+
+
+.email-input2 {
+    margin-top: 20px;
+    height: 50px;
+    width: 425px;
+    border-radius: 5px;
+    margin-left: 115px;
+    border: 1px solid #858585;
+    padding-left: 15px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.email-input2::placeholder {
+    color: black;
+    font-size: 25px;
+    font-weight: 540;
+    transition: transform 0.25s ease, font-size 0.25s ease, opacity 0.25s ease;
+    
+}
+.email-input2:focus {
+    outline: none;
+    border: 1px solid #794ef0;
+}
+.email-input2:hover:not(:focus) {
+    background-color: #f4f1f1;
+}
+
+.email-input2:focus::placeholder {
+    font-size: 12px;
+    transform: translateY(-16px);
+    opacity: 0.7;
+}
+
+
+
+.create-course-btn{
+    height:40px;
+    width:420px;
+    margin-left: 115px;
+    background-color: #6d28d2;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+}
+.image{
+    position: absolute;
+    border-radius: 10px;
+    margin-top: -430px;
+    margin-left: 60px;
+}
+.hre{
+    margin-top: 20px;
+}
+.iop{
+    font-size: 20px;
+    font-family: 'Roboto';
+    margin-left:115px;
+}
+.olp{
+    margin-top: 20px;
+    font-size: 20px;
+    font-family: 'Roboto';
+    margin-left:115px;
+}
+.upload-img{
+    font-size: 15px;
+    font-family: 'Roboto';
+    margin-left:115px;
+    margin-top:20px;
+}
+.upload-file{
+    font-size: 15px;
+    font-family: 'Roboto';
+    margin-left:115px;
+    margin-top:20px;
+}

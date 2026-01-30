@@ -1,0 +1,135 @@
+.jjj {
+    
+
+    border-radius: 10px;
+   
+
+    width: 420px;
+    height: 530px;
+    border: 1px solid rgb(209, 209, 209);
+
+}
+.sss{
+    display: flex;
+    gap:10px;
+     margin-left: 109px;
+}
+
+.ggg {
+    background-color: #e9eaf2;
+}
+
+.head {
+    border-radius: 10px 10px 0px 0px;
+    height: 10px;
+    background-color: blueviolet;
+    width: 420px;
+}
+.head1{
+     border-radius: 10px 10px 0px 0px;
+    height: 10px;
+    background-color: rgb(71, 71, 166);
+    width: 420px;
+}
+.head2{
+     border-radius: 10px 10px 0px 0px;
+    height: 10px;
+    background-color: rgb(75, 75, 75);
+    width: 420px;
+}
+
+.team-plan {
+    font-family: 'Roboto';
+    font-weight: 500;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.MdGroups {
+
+    display: relative;
+    margin-top: 10px;
+    margin-left: 30px;
+
+}
+
+.adg {
+    height: 20px;
+    width: 20px;
+    color: rgb(76, 76, 76);
+}
+
+.to5 {
+    display: relative;
+    margin-left: 60px;
+    font-family: 'Roboto';
+    margin-top: -24px;
+    font-size: 14px;
+    font-weight: 200;
+    color: rgb(49, 49, 49);
+}
+
+.tryfreebtn {
+    color: #6d28d2;
+    border-color: #6d28d2;
+    border-radius: 8px;
+    height: 45px;
+    width: 140px;
+    border-width: 1px;
+    font-family: 'Roboto';
+    font-weight: 800;
+    background-color: #e9eaf2;
+    margin-top: 15px;
+    margin-left: 30px;
+    margin-bottom: 15px;
+}
+
+.tryfreebtn:hover {
+    background-color: #d8d8d8;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.amonth {
+    margin-top: 20px;
+    margin-left: 20px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    color: rgb(43, 43, 43);
+}
+.amonth1 {
+    margin-bottom: 25px;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    color: rgb(43, 43, 43);
+}
+.billed {
+    font-family: 'Roboto';
+    margin-left: 20px;
+    font-size: 12px;
+    font-weight: 300;
+    margin-top: 9px;
+    margin-bottom: 2px;
+}
+
+.check {
+    /* This controls the line thickness */
+    stroke-width: 1;
+
+    /* Optional: Ensure the stroke is visible */
+    stroke: green;
+    margin-left: 20px;
+    margin-top: 7px;
+}
+.access{
+    position: relative;
+    margin-left: 60px;
+    margin-top: -19px;
+    font-family: 'Roboto';
+    font-size: 13px;
+    font-weight: 300;
+    margin-bottom: 10px;
+
+}

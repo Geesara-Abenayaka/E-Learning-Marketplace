@@ -1,0 +1,19 @@
+.my-courses{
+    font-family: 'Roboto';
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+.uio{
+    margin-top: 10px;
+}
+.jkl {
+    margin-top: 10px;
+  margin-left: 110px;
+  border: 1px solid #7b7b7b; /* black border, 2px thick */
+  border-radius: 8px;     /* optional: rounded corners */
+  
+}
+.tyh{
+    display: flex;
+}

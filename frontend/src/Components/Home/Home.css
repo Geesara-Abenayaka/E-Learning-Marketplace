@@ -240,6 +240,161 @@ hr {
     height:30px;
     color: #5d5d5d;
     background-color: white;
-    z-index: 1000;
-   
+    z-index: 1000; 
+}
+.show-all-courses{
+    margin-left: 112px;
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-weight: 800;
+    color: #6d28d2;
+    cursor: pointer;
+    padding-top: 180px;
+}
+.goarrowright{
+    position: relative;
+    margin-left: 5px;
+    top:3px;
+    width:16px;
+    height:16px;
+  
+}
+.brands{
+    margin-top: 60px;
+    background-color: #f6f7f9;
+    padding-bottom: 50px;
+}
+.brand-desc{
+    padding-top: 60px;
+    font-family: 'Roboto';
+    font-size: 15px;
+    color: #5d5d5d;
+    text-align: center;
+    font-weight: 450;
+    
+    font-size: 17px;
+}
+.brand-img{
+    margin-top: 25px;
+
+    margin-left: 130px;
+    display: flex;
+    gap: 80px;
+}
+.display-no{
+    display: flex   ;
+
+    margin-top: 50px;
+    height: 430px;
+    width:1280px;
+    background-color: #202230;
+    margin-left: 112px;
+    border-radius: 25px;
+    margin-bottom: 30px;
+}
+.get-certify{
+    color: white;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 33px;
+    line-height: 1.1;
+}
+.prep-certify{
+    color: white;
+    font-family: 'Roboto';
+    font-weight: 400;
+    margin-top: 15px;
+    line-height: 1.6;
+}
+.certi-btn{
+    margin-left: -5px;
+    margin-top: 30px;
+    width: 287px;
+    height: 45px;
+    border-radius: 5px;
+    border: none;
+    font-weight: 800;
+    background-color: #202230;
+    color: white;
+    font-family: 'Roboto';
+    cursor: pointer;
+    font-size: 16px;
+    padding-left: -10px;
+}
+.certi-btn:hover{
+    background-color: #2f2f3e;
+}
+.goarrowright1{
+    position: relative;
+    top:4px;
+    width:18px;
+    height:18px;
+    margin-left: 10px;
+
+}
+.box-1{
+    padding-left: 95px;
+    padding-top: 100px;
+}
+.d1img2{
+    width:170px;
+    border-radius: 8px;
+    
+}
+.compTia{
+    margin-top: 10px;
+    font-family: 'Roboto';
+    font-weight: 600;
+    font-size: 20px;
+    color: white;
+}
+.hhh{
+    margin-left: 90px;
+    margin-top: 110px;
+    padding: 15px;
+    background-color: orange;
+    border-radius: 20px;
+    height:182px;
+    background-color: #3d4055;
+}
+.hhh1{
+    margin-left: 16px;
+    margin-top: 110px;
+    padding: 15px;
+    background-color: orange;
+    border-radius: 20px;
+    height:182px;
+    background-color: #3d4055;
+}
+.hhh2{
+    margin-left: 16px;
+    margin-top: 110px;
+    padding: 15px;
+    background-color: orange;
+    border-radius: 20px;
+    height:182px;
+    background-color: #3d4055;
+}
+.eee{
+    margin-top: 5px;
+    font-family: 'Roboto';
+    font-size: 13px;
+    color: rgb(183, 183, 183);
+}
+.Reach{
+    font-size: 20px;
+    font-family: 'Roboto';
+    font-weight: 300;
+    color: #5d5d5d;
+}
+.grow{
+    font-size: 35px;
+    font-family: 'Roboto';
+    font-weight: 500    ;
+    color: #1f212d;
+    margin-bottom: -12px;
+}
+.lll{
+    margin-left: 110px;
+    margin-bottom: 35px;
 }
