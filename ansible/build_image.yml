@@ -4,21 +4,13 @@
   become: true
   gather_facts: false
 
-  vars:
-    image_name: skillstack
-
   tasks:
-    - name: Copy project files to working folder
-      copy:
-        src: /var/lib/jenkins/workspace/skillstack/
-        dest: /home/jenkins/skillstack/
-        force: yes
 
     - name: Build backend Docker image
       community.docker.docker_image:
         name: "skillstack/backend:latest"
         build:
-          path: /home/jenkins/skillstack/backend/
+          path: "{{ lookup('env','WORKSPACE') }}/backend/"
         source: build
         state: present
 
@@ -26,6 +18,6 @@
       community.docker.docker_image:
         name: "skillstack/frontend:latest"
         build:
-          path: /home/jenkins/skillstack/frontend/
+          path: "{{ lookup('env','WORKSPACE') }}/frontend/"
         source: build
         state: present
