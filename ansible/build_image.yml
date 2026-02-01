@@ -1,0 +1,31 @@
+- name: Build Skillstack Docker Image Locally
+  hosts: localhost
+  connection: local
+  become: true
+  gather_facts: false
+
+  vars:
+    image_name: skillstack
+
+  tasks:
+    - name: Copy project files to working folder
+      copy:
+        src: /var/lib/jenkins/workspace/skillstack/
+        dest: /home/jenkins/skillstack/
+        force: yes
+
+    - name: Build backend Docker image
+      community.docker.docker_image:
+        name: "skillstack/backend:latest"
+        build:
+          path: /home/jenkins/skillstack/backend/
+        source: build
+        state: present
+
+    - name: Build frontend Docker image
+      community.docker.docker_image:
+        name: "skillstack/frontend:latest"
+        build:
+          path: /home/jenkins/skillstack/frontend/
+        source: build
+        state: present
