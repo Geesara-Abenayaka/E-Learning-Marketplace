@@ -1,4 +1,4 @@
-- name: Build Skillstack Docker Image Locally
+- name: Build Skillstack Docker Images on VM2 over SSH
   hosts: localhost
   connection: local
   become: true
@@ -13,6 +13,7 @@
           path: "{{ lookup('env','WORKSPACE') }}/backend/"
         source: build
         state: present
+        docker_host: "ssh://ubuntu@3.139.235.90?private_key_file=/home/ubuntu/.ssh/ansible.pem"
 
     - name: Build frontend Docker image
       community.docker.docker_image:
@@ -21,3 +22,4 @@
           path: "{{ lookup('env','WORKSPACE') }}/frontend/"
         source: build
         state: present
+        docker_host: "ssh://ubuntu@3.139.235.90?private_key_file=/home/ubuntu/.ssh/ansible.pem"
