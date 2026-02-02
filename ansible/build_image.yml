@@ -6,8 +6,8 @@
   vars:
     vm2_user: "ubuntu"
     vm2_ip: "3.139.235.90"
-    ssh_key: "/home/ubuntu/.ssh/ansible.pem"
-    workspace: "{{ lookup('env','WORKSPACE') }}"  # Jenkins workspace
+    ssh_key: "/var/lib/jenkins/.ssh/ansible.pem"   # updated path
+    workspace: "{{ lookup('env','WORKSPACE') }}"   # Jenkins workspace
 
   tasks:
 
