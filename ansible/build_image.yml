@@ -1,4 +1,4 @@
-  - name: Build Skillstack Docker Images on VM2 via SSH
+- name: Build Skillstack Docker Images on VM2 via SSH
   hosts: localhost
   connection: local
   gather_facts: false
@@ -7,7 +7,7 @@
     vm2_user: "ubuntu"
     vm2_ip: "3.139.235.90"
     ssh_key: "/var/lib/jenkins/.ssh/ansible.pem"
-    workspace: "{{ lookup('env','WORKSPACE') }}"  # Jenkins workspace
+    workspace: "{{ lookup('env','WORKSPACE') }}"
 
   tasks:
 
