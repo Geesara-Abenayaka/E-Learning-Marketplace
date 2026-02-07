@@ -1,20 +1,27 @@
 - name: Deploy Skillstack Web on VM2
   hosts: webserver
   become: yes
+  vars:
+    mongo_uri: "mongodb+srv://abenayaka:A9eelssSIPCBpGVX@cluster0.mgyo1zg.mongodb.net/Devops?retryWrites=true&w=majority"
+    backend_port: 5000
+    frontend_port: 3000
   tasks:
 
+    # 1️⃣ Pull latest backend image
     - name: Pull backend image from DockerHub
       docker_image:
         name: geesara/skillstack-backend
         tag: latest
         source: pull
 
+    # 2️⃣ Pull latest frontend image
     - name: Pull frontend image from DockerHub
       docker_image:
         name: geesara/skillstack-frontend
         tag: latest
         source: pull
 
+    # 3️⃣ Run backend container with MongoDB Atlas URI
     - name: Run backend container
       docker_container:
         name: backend
@@ -22,8 +29,12 @@
         state: started
         restart_policy: always
         ports:
-          - "5000:5000"
+          - "{{ backend_port }}:{{ backend_port }}"
+        env:
+          MONGO_URI: "{{ mongo_uri }}"
+          NODE_ENV: "production"
 
+    # 4️⃣ Run frontend container pointing to backend dynamically
     - name: Run frontend container
       docker_container:
         name: frontend
@@ -31,4 +42,6 @@
         state: started
         restart_policy: always
         ports:
-          - "3000:3000"
+          - "{{ frontend_port }}:{{ frontend_port }}"
+        env:
+          REACT_APP_BACKEND_URL: "http://{{ ansible_host }}:{{ backend_port }}"
