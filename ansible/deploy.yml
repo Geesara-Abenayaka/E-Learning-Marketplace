@@ -4,7 +4,8 @@
   vars:
     mongo_uri: "mongodb+srv://abenayaka:A9eelssSIPCBpGVX@cluster0.mgyo1zg.mongodb.net/Devops?retryWrites=true&w=majority"
     backend_port: 5000
-    frontend_port: 3000
+    frontend_host_port: 3000   # host port
+    frontend_container_port: 5173  # container's Vite default port
   tasks:
 
     # 1️⃣ Pull latest backend image
@@ -42,6 +43,6 @@
         state: started
         restart_policy: always
         ports:
-          - "{{ frontend_port }}:{{ frontend_port }}"
+          - "{{ frontend_host_port }}:{{ frontend_container_port }}"
         env:
           REACT_APP_BACKEND_URL: "http://{{ ansible_host }}:{{ backend_port }}"
