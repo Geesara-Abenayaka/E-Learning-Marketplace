@@ -1,0 +1,34 @@
+- name: Deploy Skillstack Web on VM2
+  hosts: webserver
+  become: yes
+  tasks:
+
+    - name: Pull backend image from DockerHub
+      docker_image:
+        name: geesara/skillstack-backend
+        tag: latest
+        source: pull
+
+    - name: Pull frontend image from DockerHub
+      docker_image:
+        name: geesara/skillstack-frontend
+        tag: latest
+        source: pull
+
+    - name: Run backend container
+      docker_container:
+        name: backend
+        image: geesara/skillstack-backend:latest
+        state: started
+        restart_policy: always
+        ports:
+          - "5000:5000"
+
+    - name: Run frontend container
+      docker_container:
+        name: frontend
+        image: geesara/skillstack-frontend:latest
+        state: started
+        restart_policy: always
+        ports:
+          - "3000:3000"
