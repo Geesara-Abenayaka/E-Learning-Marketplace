@@ -43,4 +43,4 @@
         ports:
           - "{{ frontend_port }}:5173"
         env:
-          REACT_APP_BACKEND_URL: "http://{{ ansible_host }}:{{ backend_port }}"
+          VITE_BACKEND_URL: "http://{{ ansible_host }}:{{ backend_port }}"

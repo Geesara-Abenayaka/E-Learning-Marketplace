@@ -7,6 +7,8 @@ import appleimg from '../../assets/apple.png'
 import './Login.css'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
+import axiosClient from '../../utills/client'
+
 
 
 
@@ -22,8 +24,8 @@ function Login() {
 
   const handleLogin = async () => {
   try {
-    const res = await fetch('http://localhost:5000/api/users');
-    const users = await res.json();
+    const res = await axiosClient.get('/api/users');
+     const users = res.data;
 
    
     const user = users.find(u => u.email === email && u.password === password);

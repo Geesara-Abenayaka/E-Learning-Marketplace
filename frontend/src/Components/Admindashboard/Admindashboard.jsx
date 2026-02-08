@@ -4,6 +4,7 @@ import d1 from '../../assets/d1.jpg'
 import Navbar from '../Navbar/Navbar'
 import axios from 'axios';
 import Card from '../Card/Card';
+import axiosClient from '../../utills/client.js'
 
 
 function Admindashboard() {
@@ -12,7 +13,7 @@ function Admindashboard() {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/product');
+                const response = await axiosClient.get('/api/product');
                 setProducts(response.data);
             } catch (error) {
                 console.error('Error fetching products:', error);
@@ -39,11 +40,12 @@ function Admindashboard() {
         formData.append('file', file);
 
         try {
-            const res = await fetch('http://localhost:5000/api/product', {
-                method: 'POST',
-                body: formData,
+            const res = await axiosClient.post('/api/product', formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data',  // important for file upload
+                },
             });
-            if (res.ok) {
+            if (res.status === 200 || res.status === 201) {
                 alert('Course created successfully!');
                 setName('');
                 setTutor('');

@@ -25,6 +25,7 @@ import b8 from '../../assets/b8.svg'
 import d1 from '../../assets/d1.png'
 import d2 from '../../assets/d2.png'
 import d3 from '../../assets/d3.jpg'
+import axiosClient from '../../utills/client';
 
 function Home() {
   const [products, setProducts] = useState([]);
@@ -32,7 +33,7 @@ function Home() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/product');
+        const response = await axiosClient.get('/api/product');
         setProducts(response.data);
       } catch (error) {
         console.error('Error fetching products:', error);

@@ -6,6 +6,7 @@ import googleimg from '../../assets/google.png'
 import facebookimg from '../../assets/facebook.png'
 import appleimg from '../../assets/apple.png'
 import './Signup.css'
+import axiosClient from '../../utills/client'
 
 
 
@@ -21,17 +22,12 @@ function Signup() {
 
   const handleSignup = async () => {
   try {
-    const res = await fetch('http://localhost:5000/api/users', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ email, password }),
-    });
+    const res = await axiosClient.post('/api/users', { email, password });
+     
 
-    const data = await res.json();
+    // const data = await res.json();
 
-    if (res.ok) {
+    if (res.status === 200 || res.status === 201) {
       alert('Signup successful!');
 
       setEmail('');
