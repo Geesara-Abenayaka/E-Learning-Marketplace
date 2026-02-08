@@ -2,7 +2,6 @@
   hosts: webserver
   become: yes
   vars:
-    mongo_uri: "mongodb+srv://abenayaka:A9eelssSIPCBpGVX@cluster0.mgyo1zg.mongodb.net/Devops?retryWrites=true&w=majority"
     backend_port: 5000
     frontend_port: 3000
   tasks:
@@ -31,7 +30,7 @@
         ports:
           - "{{ backend_port }}:{{ backend_port }}"
         env:
-          MONGO_URI: "{{ mongo_uri }}"
+          MONGO_URI: "{{ mongo_uri }}"   # <-- injected from Jenkins
           NODE_ENV: "production"
 
     # 4️⃣ Run frontend container pointing to backend dynamically
@@ -42,6 +41,6 @@
         state: started
         restart_policy: always
         ports:
-          - "{{ frontend_port }}:5173"      # <-- changed container port to 5173
+          - "{{ frontend_port }}:5173"
         env:
           REACT_APP_BACKEND_URL: "http://{{ ansible_host }}:{{ backend_port }}"
