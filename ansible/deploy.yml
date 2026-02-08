@@ -12,6 +12,7 @@
         name: geesara/skillstack-backend
         tag: latest
         source: pull
+        force_source: true
 
     # 2️⃣ Pull latest frontend image
     - name: Pull frontend image from DockerHub
@@ -19,6 +20,7 @@
         name: geesara/skillstack-frontend
         tag: latest
         source: pull
+        force_source: true
 
     # 3️⃣ Run backend container with MongoDB Atlas URI
     - name: Run backend container
