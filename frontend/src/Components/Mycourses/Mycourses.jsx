@@ -29,7 +29,9 @@ function Mycourses() {
 
   return (
     <div>
+      
       <Navbar />
+      {/*hjdsdh*/}
       <div className='my-courses'>My Courses</div>
       <hr className='uio' />
       <div className='tyh'>
