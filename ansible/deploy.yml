@@ -22,32 +22,26 @@
         source: pull
         force_source: true
 
-    # 3️⃣ Run backend container with MongoDB and S3 Variables
+    # 3️⃣ Run backend container with MongoDB Atlas URI
     - name: Run backend container
       docker_container:
         name: backend
         image: geesara/skillstack-backend:latest
         state: started
         restart_policy: always
-        recreate: yes
         ports:
           - "{{ backend_port }}:{{ backend_port }}"
         env:
-          MONGO_URI: "{{ mongo_uri }}"
-          AWS_ACCESS_KEY: "{{ aws_access_key }}"
-          AWS_SECRET_KEY: "{{ aws_secret_key }}"
-          AWS_REGION: "{{ aws_region }}"
-          S3_BUCKET: "{{ s3_bucket }}"
+          MONGO_URI: "{{ mongo_uri }}"   # <-- injected from Jenkins
           NODE_ENV: "production"
 
-    # 4️⃣ Run frontend container
+    # 4️⃣ Run frontend container pointing to backend dynamically
     - name: Run frontend container
       docker_container:
         name: frontend
         image: geesara/skillstack-frontend:latest
         state: started
         restart_policy: always
-        recreate: yes
         ports:
           - "{{ frontend_port }}:5173"
         env:
