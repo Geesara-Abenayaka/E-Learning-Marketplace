@@ -6,7 +6,7 @@
     frontend_port: 3000
   tasks:
 
-    # 1️⃣ Pull latest backend image
+   
     - name: Pull backend image from DockerHub
       docker_image:
         name: geesara/skillstack-backend
@@ -14,7 +14,7 @@
         source: pull
         force_source: true
 
-    # 2️⃣ Pull latest frontend image
+  
     - name: Pull frontend image from DockerHub
       docker_image:
         name: geesara/skillstack-frontend
@@ -22,7 +22,6 @@
         source: pull
         force_source: true
 
-    # 3️⃣ Run backend container with S3 and Mongo Credentials
     - name: Run backend container
       docker_container:
         name: backend
@@ -40,7 +39,7 @@
           S3_BUCKET: "{{ s3_bucket }}"
           NODE_ENV: "production"
 
-    # 4️⃣ Run frontend container
+ 
     - name: Run frontend container
       docker_container:
         name: frontend
