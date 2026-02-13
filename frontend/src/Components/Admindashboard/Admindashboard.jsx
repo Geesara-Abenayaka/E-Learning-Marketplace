@@ -1,4 +1,5 @@
-import React, { use, useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react';
+
 import '../Admindashboard/Admindashboard.css'
 import d1 from '../../assets/d1.jpg'
 import Navbar from '../Navbar/Navbar'
@@ -8,7 +9,27 @@ import axiosClient from '../../utills/client.js'
 
 
 function Admindashboard() {
+    const fileInputRef = useRef(null);
+
     const [products, setProducts] = useState([]);
+    const handleDelete = async (id) => {
+        try {
+            const res = await axiosClient.delete(`/api/product/${id}`);
+            if (res.status === 200) {
+                alert('Course deleted successfully!');
+                setProducts(prevProducts =>
+                    prevProducts.filter(product => product._id !== id)
+                );
+
+            } else {
+                alert('Failed to delete course');
+            }
+        }
+        catch (err) {
+            console.error(err);
+            alert('Something went wrong!');
+        }
+    }
 
     useEffect(() => {
         const fetchProducts = async () => {
@@ -30,7 +51,12 @@ function Admindashboard() {
     const [img, setImg] = useState('');
     const [file, setFile] = useState(null);
 
+
     const create = async () => {
+        if (!name || !tutor || !price || !category || !img || !file) {
+            alert("Please fill in all fields before creating the course!");
+            return; // stop the function
+        }
         const formData = new FormData();
         formData.append('name', name);
         formData.append('tutor', tutor);
@@ -39,13 +65,17 @@ function Admindashboard() {
         formData.append('img', img);
         formData.append('file', file);
 
+
         try {
             const res = await axiosClient.post('/api/product', formData, {
                 headers: {
-                    'Content-Type': 'multipart/form-data',  // important for file upload
+                    'Content-Type': 'multipart/form-data',
                 },
             });
             if (res.status === 200 || res.status === 201) {
+                const newProduct = res.data;
+
+                setProducts(prev => [...prev, newProduct]);
                 alert('Course created successfully!');
                 setName('');
                 setTutor('');
@@ -53,6 +83,9 @@ function Admindashboard() {
                 setCategory('');
                 setImg('');
                 setFile(null);
+                if (fileInputRef.current) {
+                    fileInputRef.current.value = '';
+                }
             } else {
                 alert('Failed to create course');
             }
@@ -116,28 +149,40 @@ function Admindashboard() {
                 type="file"
                 className='email-input1'
                 placeholder='Upload Course Content'
-
+                ref={fileInputRef}
                 accept=".txt"
                 onChange={(e) => setFile(e.target.files[0])}
             // onChange={(e) => setImage(e.target.files[0])}
             />
             <br />
-            <button className='create-course-btn' onClick={create}>Create the Course</button>
+            <button className='create-course-btn' onClick={create} disabled={
+                !name ||
+                !tutor ||
+                !price ||
+                !category ||
+                !img ||
+                !file
+            }>Create the Course</button>
             <img src={d1} className='image' />
             <hr className='hre' />
             <div className='iop'>Deleting a Course</div>
             <div className="cards-container">
                 {products.length === 0 ? (
-                    <p>No courses found</p>
+                    <p className='bura'>No courses found</p>
                 ) : (
                     products.map((product) => (
-                        <Card
-                            key={product._id}
-                            name={product.name}
-                            tutor={product.tutor}
-                            price={product.price}
-                            img={product.img}
-                        />
+                    
+                            <div className='cardocon'>
+                                <Card
+                                    key={product._id}
+                                    name={product.name}
+                                    tutor={product.tutor}
+                                    price={product.price}
+                                    img={product.img}
+                                />
+                                <button className='delete-icon' key={product._id} onClick={() => handleDelete(product._id)}>Delete</button>
+                            </div>
+                      
                     ))
                 )}
             </div>

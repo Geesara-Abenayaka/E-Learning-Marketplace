@@ -7,7 +7,9 @@ function Card(
     {name,
     tutor,
     price,
-    img,}
+    img,
+    onClick
+}
 ) {
     return (
         <div className='card-wrap'>

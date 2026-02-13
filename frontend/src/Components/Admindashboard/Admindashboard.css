@@ -80,6 +80,11 @@
     font-size: 15px;
     font-weight: 500;
 }
+.create-course-btn:hover{
+    background-color: blueviolet;
+    cursor: pointer;
+    transition: 0.3s;
+}
 .image{
     position: absolute;
     border-radius: 10px;
@@ -111,4 +116,45 @@
     font-family: 'Roboto';
     margin-left:115px;
     margin-top:20px;
+}
+.cardocon{
+    border  : 1px solid rgb(122, 122, 122);
+    border-radius: 10px;
+}
+.delete-icon{
+  
+    margin-bottom: 10px;
+    margin-left: 28px;
+    width:250px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border:none;
+    border-radius: 5px;
+    background-color: #6d28d2;
+    color:white;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Roboto';
+    margin-bottom: 15px;
+}
+.delete-icon:hover{
+    background-color: blueviolet;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.bura{
+    font-size: 15px;
+    font-family: 'Roboto';
+    margin-left:5px;
+    margin-top:20px;
+    color: grey;
+}
+.cardcon{
+    display: flex;
+}
+.cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
 }

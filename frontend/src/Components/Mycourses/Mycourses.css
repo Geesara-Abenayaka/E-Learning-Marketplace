@@ -1,19 +1,34 @@
-.my-courses{
+.my-courses {
     font-family: 'Roboto';
     font-size: 20px;
     text-align: center;
     margin-top: 20px;
 }
-.uio{
+
+.uio {
     margin-top: 10px;
 }
+
 .jkl {
-    margin-top: 10px;
-  margin-left: 110px;
-  border: 1px solid #7b7b7b; /* black border, 2px thick */
-  border-radius: 8px;     /* optional: rounded corners */
-  
+    border: 1.5px solid rgb(229, 228, 228);
+    border-top: none;
+    border-radius: 20px;
 }
-.tyh{
+
+.tyh {
+    margin-top: 50px;
+    margin-left: 95px  ;
     display: flex;
+   flex-wrap: wrap;   
+    gap:30px;
+}
+.abc{
+    border: 1.5px solid rgb(229, 228, 228);
+    border-top: none;
+    border-radius: 20px;
+    position: relative;
+}
+.abc:hover{
+    background-color: #f5f5f5;
+    cursor: pointer;
 }

@@ -13,6 +13,7 @@
     border:none;
     margin-left: 700px;
     margin-top: 50px;
+    margin-bottom: 50px;
 }
 .uio{
     margin-top: 10px;
@@ -29,7 +30,7 @@
 }
 .cancel-btn{
     margin-left: 50px;
-    height:30px;
+    height:35px;
     margin-top: -20px;
     margin-bottom: 10px;
     background-color: #794ef0;
@@ -41,10 +42,35 @@
     border-radius: 10px;
 }
 .cancel-btn:hover{
+    cursor: pointer;
     background-color: blueviolet;
     transition: 0.3s ease-in-out;
 }
 .buy-now:hover{
     background-color: blueviolet;
     transition: 0.3s ease-in-out;
+}
+.cohio{
+    gap:20px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 110px;
+    margin-top: 50px;
+}
+.lol{
+    
+     border: 1.5px solid rgb(229, 228, 228);
+    border-top: none;
+    border-radius: 20px;
+    position: relative;
+
+}
+.empty-cart{
+    text-align: center;
+    margin-left:560px;
+    font-family: 'Roboto';
+    margin-top: 50px;
+    color: #808080;
+    font-size: 18px;
+    margin-bottom: 20px;
 }

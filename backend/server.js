@@ -41,7 +41,8 @@ async function uploadTxtToS3(file) {
         Bucket: process.env.S3_BUCKET,
         Key: `files/${Date.now()}-${file.originalname}`,
         Body: file.buffer,
-        ContentType: 'text/plain'
+        ContentType: 'text/plain',
+        
     };
 
     const data = await s3.upload(params).promise();
@@ -110,4 +111,55 @@ app.get('/api/users', async (req, res) => {
 
 app.listen(5000, () => {
     console.log('Server is running on port 5000');
+});
+
+app.post('/api/purchase', async (req, res) => {
+    const { userEmail, productId } = req.body;
+    try {
+        const user = await User.findOne({ email: userEmail });
+        if (!user) {
+            return res.status(404).json({ error: 'User not found' });
+        }
+        if (user.purchasedCourses.includes(productId)) {
+            return res.status(400).json({ error: 'Course already purchased' });
+        }
+        user.purchasedCourses.push(productId);
+        await user.save();
+        res.status(200).json({ message: 'Course purchased successfully' });
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
+app.get('/api/purchase', async (req, res) => {
+    const { userEmail } = req.query;
+    try {
+        const user = await User.findOne({ email: userEmail }).populate('purchasedCourses');
+        if (!user) {
+            return res.status(404).json({ error: 'User not found' });
+        }
+        console.log(user.purchasedCourses);
+        res.status(200).json(user.purchasedCourses);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
+// Admin login route
+app.post('/api/adminlogin', async (req, res) => {
+    const { email, password } = req.body;
+
+    try {
+        const admin = await User.findOne({ email, isAdmin: true });
+        if (!admin) return res.status(401).json({ error: 'Admin not found' });
+
+        if (admin.password !== password) {
+            return res.status(401).json({ error: 'Incorrect password' });
+        }
+
+        // You can send the admin info back
+        res.status(200).json({ message: 'Admin login successful', admin });
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
 });

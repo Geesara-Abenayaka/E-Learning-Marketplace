@@ -2,7 +2,7 @@ import React from 'react'
 import axios from 'axios';
 import Packages from '../../Components/Packages/Packages'
 import Header from '../Header/Header';
-import { useState,useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Navbar from '../../Components/Navbar/Navbar'
 import { GiArtificialHive } from "react-icons/gi";
 import { BiCertification } from "react-icons/bi";
@@ -39,7 +39,7 @@ function Home() {
         console.error('Error fetching products:', error);
       }
     };
-    
+
     fetchProducts();
 
   }, []);
@@ -47,14 +47,22 @@ function Home() {
   const [hoveredCard, setHoveredCard] = useState(null);
 
 
+
+
   const tabs = [
-    { id: "b1", label: "Artificial Intelligence (AI)" },
+    { id: "b1", label: "Artificial Intelligence  (AI)" },
     { id: "b2", label: "Python" },
     { id: "b3", label: "Machine Learning" },
     { id: "b4", label: "AI Agents and Agentic AI" },
     { id: "b5", label: "Cyber Security" },
     { id: "b6", label: "Amazon AWS" },
   ]
+
+  const selectedCategory = tabs.find(tab => tab.id === activeTab)?.label;
+
+  const filteredProducts = products.filter(
+    product => product.category === selectedCategory
+  );
   return (
 
     <div>
@@ -101,25 +109,25 @@ function Home() {
       </div>
       <hr />
       <div className='cards-container'>
-        {[1, 2, 3, 4].map((i) => (
+        {filteredProducts.map((product, index) => (
           <div
-            key={i}
+            key={product._id}
             className='card-div'
-            onMouseEnter={() => setHoveredCard(i)}
+            onMouseEnter={() => setHoveredCard(index)}
             onMouseLeave={() => setHoveredCard(null)}
           >
-            <Card name="Course Name" tutor="Tutor Name" price="$9.99" img={d1} />
-            {hoveredCard === i && (
-              i % 4 == 0
-                ? <div className='loweena'><Model /></div>
-                : <div><Model /></div>
-            )}
+            <Card
+              name={product.name}
+              tutor={product.tutor}
+              price={`$${product.price}`}
+              img={product.img}
+            />  
 
-
+            {hoveredCard === index && ( (index+1) % 4 === 0 ? <div className='loweena'><Model product={product} /></div> : <div><Model product={product}  /></div> )}
           </div>
         ))}
-
       </div>
+
       <div className='next-btn'>
         <button className="next-button"><MdNavigateNext className='aaa' /></button>
       </div>
@@ -145,31 +153,31 @@ function Home() {
           <div className='prep-certify'>Prep for certifications with comprehensive<br />courses, practice tests, and special offers on exam<br />vouchers. </div>
           <button className='certi-btn'>Explore certification and vouchers<GoArrowRight className='goarrowright1' /></button>
         </div>
-        <div className='hhh'> 
+        <div className='hhh'>
           <img src={d1} alt='p1img' className='d1img2' />
           <div className='compTia'>CompTIA</div>
-          <div className='eee'>Cloud,Networking,<br/>Cybersecurity</div>
-        </div>  
-        <div className='hhh1'> 
+          <div className='eee'>Cloud,Networking,<br />Cybersecurity</div>
+        </div>
+        <div className='hhh1'>
           <img src={d2} alt='p1img' className='d1img2' />
           <div className='compTia'>AWS</div>
-          <div className='eee'>Cloud,AI,Coding,<br/>Networking</div>
-        </div>  
-        <div className='hhh2'> 
+          <div className='eee'>Cloud,AI,Coding,<br />Networking</div>
+        </div>
+        <div className='hhh2'>
           <img src={d3} alt='p1img' className='d1img2' />
           <div className='compTia'>PMI</div>
-          <div className='eee'>Project & Program <br/>Management</div>
-        </div>  
+          <div className='eee'>Project & Program <br />Management</div>
+        </div>
       </div>
       <div className='lll'>
-        <div className='grow'>Grow your team's skills and your business</div><br/>
+        <div className='grow'>Grow your team's skills and your business</div><br />
         <div className='Reach'>Reach goals faster with one of our plans or programs. Try one free today or contact sales to learn more.</div>
       </div>
       <Packages />
-      <br/>
-      <br/>
-      <br/>
-      <Header/>
+      <br />
+      <br />
+      <br />
+      <Header />
     </div>
 
   )

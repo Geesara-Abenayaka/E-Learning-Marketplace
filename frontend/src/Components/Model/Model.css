@@ -99,3 +99,8 @@
      font-weight: 600;
     
 }
+.add-to-cart:hover{
+    background-color: blueviolet;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}

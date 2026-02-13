@@ -2,13 +2,27 @@ import React from "react";
 
 import "./Model.css";
 
-function Model() {
+function Model({ product }) {
+
+    function addToCart(item) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const exists = cart.some(cartItem => cartItem._id === item._id);
+
+        if (exists) {
+            alert('This course is already in your cart!');
+            return; 
+        }
+        cart.push(item);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert('Course added to cart!');
+    }
+
     return (
         <div className="model-initial-conainer">
             <div className="model-container">
                 <div className="model-header">
                     <div className="model-title">
-                        The AI Engineer Course 2025: <br /> Complete AI Engineer Bootcamp
+                        {product.name}
                     </div>
 
                 </div>
@@ -25,17 +39,17 @@ function Model() {
                     LangChain, Hugging Face,<br /> APIs
                 </div>
                 <div className="list-heading">
-                    ✓ <div className="list-desc">The course provides the entire toolbox you<br/> need to become an AI Engineer</div>
-                    ✓<div className="list-desc"> The course provides the entire toolbox you<br/> need to become an AI Engineer</div>
-                    ✓<div className="list-desc"> The course provides the entire toolbox you<br/> need to become an AI Engineer</div>
-                
+                    ✓ <div className="list-desc">The course provides the entire toolbox you<br /> need to become an AI Engineer</div>
+                    ✓<div className="list-desc"> The course provides the entire toolbox you<br /> need to become an AI Engineer</div>
+                    ✓<div className="list-desc"> The course provides the entire toolbox you<br /> need to become an AI Engineer</div>
+
 
                 </div>
 
 
 
                 <button className="add-to-cart">
-                    <div className="addtocart">Add to cart</div></button>
+                    <div className="addtocart" onClick={() => addToCart(product)}>Add to cart</div></button>
             </div>
 
         </div>
