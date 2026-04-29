@@ -68,7 +68,7 @@ function Home() {
     <div>
       <Navbar />
       <div className='ai-era-div'>
-        <p ><div className='ai-era'>imagine your career in the<br /> AI era<br /></div>
+        <p ><div className='ai-era'>Reimagine your career in the<br /> AI era<br /></div>
           <div className='ai-era-desc'> Future-proof your skills with Personal Plan. Get access to a variety of<br /> fresh content from real-world experts.</div>
 
           <div className='avd'><GiArtificialHive className='ai-icon' />
